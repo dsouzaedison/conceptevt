@@ -1,0 +1,21 @@
+<div class="events-view" ng-controller="galleryCtrl as gallery">
+    <div class="event-wrapper">
+        <div class="col-lg-3 col-md-6 col-sm-12 gallery-card-padding"
+             ng-repeat="image in gallery.galleryImages">
+            <div class="card hover gallery-card-container animated fadeIn">
+                <img ng-src="http://www.conceptevt.com/images/gallery/{{image}}" ng-click="gallery.setUrl($index)" class="gallery-image" alt="Image" width="100%"
+                     height="100%"/>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="gallery-expanded" ng-show="gallery.showModal">
+    <div class="close" ng-click="gallery.closeModal()"><i class="fa fa-times-circle"></i></div>
+    <img ng-src="http://www.conceptevt.com/images/gallery/{{gallery.modalUrl}}" class="gallery-image" alt="">
+    <div class="left-chevron" ng-click="gallery.showLeft()" ng-hide="gallery.modalIndex==0"><i class="fa fa-chevron-left"></i></div>
+    <div class="right-chevron" ng-click="gallery.showRight()" ng-hide="gallery.modalIndex==(gallery.galleryImages.length-1)"><i class="fa fa-chevron-right"></i></div>
+</div>
+
+</div>

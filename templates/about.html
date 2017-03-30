@@ -1,0 +1,19 @@
+<div class="a-view" ng-controller="teamCtrl as team">
+
+    <div class="container">
+        <div class="card h2 team-heading">Our Team</div>
+        <div class="col-lg-4 col-md-6" ng-repeat="member in team.members">
+            <div class="card-fluid card-fluid-margin animated fadeInUp">
+                <div class="team-image-container">
+                    <img src="images/{{member.bg}}" class="material-image blur" />
+                    <img src="images/{{member.img}}" class="team-image" />
+                </div>
+                <button class="e-btn-fb"><i class="fa fa-facebook"></i></button>
+                <div class="h3 member-name padding-top">{{member.name}}</div>
+                <div class="about-content">
+                   <p>{{member.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
